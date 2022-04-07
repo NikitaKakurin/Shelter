@@ -1,0 +1,25 @@
+@import './base/normalize.css';
+@import './base/fonts';
+
+// -------------abstracts-------------
+@import './abstracts/mixins';
+@import './abstracts/constants';
+@import './abstracts/placeholders';
+
+// -------------base-------------
+@import './base/base.scss';
+@import './base/buttons.scss';
+// -------------components-------------
+@import './components/logo';
+@import './components/menu';
+@import './components/start';
+@import './components/about';
+@import './components/our-friends';
+@import './components/help';
+@import './components/donation';
+
+// ----------------layout--------------
+@import './layout/container.scss';
+@import './layout/header.scss';
+@import './layout/wrapper-start.scss';
+@import './layout/footer.scss';

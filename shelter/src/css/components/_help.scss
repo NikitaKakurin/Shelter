@@ -1,0 +1,76 @@
+.help{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__title{
+        @extend %h3;
+        margin: 0 auto;
+        max-width: 310px;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    &__items_container{
+        @include flex($j_content:center, $align:center);
+        column-gap: 119px;
+        row-gap: 55px;
+        padding-left: 87px;
+        padding-right: 87px;
+    }
+
+    &__item_img{
+        margin: 0 auto;
+        width: 60px;
+        height: 60px; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        &-food{
+            background-image: url(../assets/svg/icon-pet-food.svg);
+        }
+
+        &-transportation{
+            background-image: url(../assets/svg/icon-transportation.svg);
+        }
+
+        &-toys{
+            background-image: url(../assets/svg/icon-toys.svg);
+        }
+
+        &-bowls{
+            background-image: url(../assets/svg/icon-bowls-and-cups.svg);
+        }
+
+        &-shampoos{
+            background-image: url(../assets/svg/icon-shampoos.svg);
+        }
+
+        &-vitamins{
+            background-image: url(../assets/svg/icon-vitamins.svg);
+        }
+
+        &-medicines{
+            background-image: url(../assets/svg/icon-medicines.svg);
+        }
+
+        &-collars{
+            background-image: url(../assets/svg/collars-or-leashes.svg);
+        }
+        
+        &-areas{
+            background-image: url(../assets/svg/icon-sleeping-area.svg);
+        }
+    }
+
+    &__item_title{
+        @extend %h4;
+        margin: 0 auto;
+        margin-top: 30px;
+        text-align: center;
+        color: $color-dark-l;
+    }
+}

@@ -1,0 +1,14 @@
+@import '../abstracts/mixins';
+@import '../abstracts/constants';
+@import '../abstracts/placeholders';
+
+.header{
+    padding-bottom: 60px;
+    &__wrapper{
+        @include flex($j_content:space-between,$align:center)
+    }
+
+    &__logo_container{
+        margin: 0;
+    }
+}

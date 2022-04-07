@@ -1,0 +1,39 @@
+.about{
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__container{
+        @include flex();
+        gap: 120px;
+    }
+
+    &__image{
+        width: 300px;
+        height: 408px;
+        background-image: url(../assets/image/background/about-pets.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__text_wrapper{
+        @include flex($direction:column);
+        width: 100%;
+        max-width: 430px; 
+        padding-top: 14px;
+        row-gap: 25px       
+    }
+
+    &__title{
+        @extend %h3;
+        width: 100%;
+        max-width: 370px;
+        margin: 0;
+        color: $color-dark-l;
+    }
+
+    &__text_part1, &__text_part2{
+        margin: 0;
+        @extend %paragraph-i;
+        color: $color-dark-xl;
+    }
+}

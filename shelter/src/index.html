@@ -8,33 +8,42 @@
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <div class="header__container">
-        <div class = "header__logo">
-          <h1 class = "header__logo_title">Cozy House</h1>
-          <p class="header__logo_subtitle">Shelter for pets in Boston</p>
+    <div class="wrapper-start">
+      <header class="header">
+        <div class="header__wrapper">
+          <h1 class="header__logo_container">
+            <a href="#" class = "logo">
+              <span class = "logo__title">Cozy House</span>
+              <span class="logo__subtitle">Shelter for pets in Boston</span>
+            </a>
+          </h1>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" class="menu__link menu__link-active">About the shelter</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Our pets</a></li>
+              <li class="menu__item"><a href="#help" class="menu__link">Help the shelter</a></li>
+              <li class="menu__item"><a href="#footer" class="menu__link">Contacts</a></li>
+            </ul>
+          </nav>
         </div>
-      </div>
-      <nav class="header__menu">
-        <ul class="header__menu_list">
-          <li class="header__menu_list"><a href="#" class="header__menu_link">About the shelter</a></li>
-          <li class="header__menu_list"><a href="#" class="header__menu_link">Our pets</a></li>
-          <li class="header__menu_list"><a href="#" class="header__menu_link">Help the shelter</a></li>
-          <li class="header__menu_list"><a href="#" class="header__menu_link">Contacts</a></li>
-        </ul>
-      </nav>
-    </header>
+      </header>
+      <section class="start">
+        <div class="start__container">
+          <div class="start__content">
+            <h2 class="start__title">Not only people need a house</h2>
+            <p class="start__text">We offer to give a chance to a little 
+              and nice puppy with an extremely wide and open heart. He or she 
+              will love you more than anybody else in the world, you will see!
+            </p>
+            <a href="#our-friends" class="button-colored button">Make a friend</a>
+          </div>
+          <div class="start__img"></div>
+        </div>
+      </section>
+    </div>
+
     <section class="about">
       <div class="about__container">
-        <div class="make-friend__container">
-          <h2 class="make-friend__title">Not only people need a house</h2>
-          <p class="make-friend__text">We offer to give a chance to a little 
-            and nice puppy with an extremely wide and open heart. He or she 
-            will love you more than anybody else in the world, you will see!
-          </p>
-          <button class="make-friend__text">Make a friend</button>
-        </div>
-        <div class="about__flex_container">
           <div class = "about__image"></div>
           <div class="about__text_wrapper">
             <h2 class="about__title">About the shelter “Cozy House”</h2>
@@ -53,77 +62,84 @@
                 leave them alone.
             </p>
           </div>
-        </div>  
       </div>
     </section>
-    <section class="our-friends">
+    <section class="our-friends" id="our-friends">
       <div class="our-friends__container">
-        <h2 class="our-friends__title">Our friends who
-          are looking for a house
+        <h2 class="our-friends__title">
+          <span>Our friends who</span> 
+          <span>are looking for a house</span> 
         </h2>
-        <div class="slider__conainer">
-          <button class="slider__arrow_prev"></button>
+        <div class="slider">
+          <button class="slider__arrow slider__arrow-prev"></button>
           <div class="slider__items_container">
-            <div class="slider__item">
-              <div class="slider__item_img"></div>
-              <h3 class="slider__item_title">Katrine</h3>
-              <button class="slider__item_button">Learn more</button>
-            </div>
-            <div class="slider__item">
-              <div class="slider__item_img"></div>
-              <h3 class="slider__item_title">Jennifer</h3>
-              <button class="slider__item_button">Learn more</button>
-            </div>
-            <div class="slider__item">
-              <div class="slider__item_img"></div>
-              <h3 class="slider__item_title">Woddy</h3>
-              <button class="slider__item_button">Learn more</button>
-            </div>
+            <figure class="slider__item">
+              <img class="slider__item_img" alt="Katrine" width="270" height="270" src="./assets/image/slider/pets-katrine.png">
+              <figcaption class="slider__item_figcaption">
+                <h3 class="slider__item_title">Katrine</h3>
+                <button class="slider__item_button button button-light">Learn more</button>
+              </figcaption>
+            </figure>
+            <figure class="slider__item">
+              <img class="slider__item_img" alt="Jennifer" width="270" height="270" src="./assets/image/slider/pets-jennifer.png">
+              <figcaption class="slider__item_figcaption">
+                <h3 class="slider__item_title">Jennifer</h3>
+                <button class="slider__item_button button button-light">Learn more</button>
+              </figcaption>
+            </figure>
+            <figure class="slider__item">
+              <img class="slider__item_img" alt="Woody" width="270" height="270"  src="./assets/image/slider/pets-woody.png">
+              <figcaption class="slider__item_figcaption">
+                <h3 class="slider__item_title">Woody</h3>
+                <button class="slider__item_button button button-light">Learn more</button>
+              </figcaption>
+            </figure>
           </div>
-          <button class="slider__arrow_next"></button>
+          <button class="slider__arrow slider__arrow-next"></button>
         </div>
-        <button class="our__friends_get_rest">Get to know the rest</button>
+        <a href="#" class="our-friends__get_rest button button-colored">Get to know the rest</a>
       </div>
     </section>
-    <section class="help">
-      <h2 class="help__item">
-        How you can help our shelter
+    <section class="help" id="help">
+      <h2 class="help__title">
+        <span>How you can&nbsp;help</span>
+        <span>our shelter</span>
       </h2>
       <div class="help__items_container">
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-food"></div>
           <p class="help__item_title">Pet food</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-transportation"></div>
           <p class="help__item_title">Transportation</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-toys"></div>
           <p class="help__item_title">Toys</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-bowls"></div>
           <p class="help__item_title">Bowls and cups</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-shampoos"></div>
           <p class="help__item_title">Shampoos</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-vitamins"></div>
           <p class="help__item_title">Vitamins</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-medicines"></div>
           <p class="help__item_title">Medicines</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-collars"></div>
           <p class="help__item_title">Collars / leashes</p>
         </div>
         <div class="help__item">
-          <div class="help__item_img"></div>
+          <div class="help__item_img help__item_img-areas"></div>
           <p class="help__item_title">Sleeping areas</p>
         </div>
       </div>
@@ -134,7 +150,7 @@
         <div class="donation__text_container">
           <h2 class="donation__title">You can also make a donation</h2>
           <p class="donation__bank_info">Name of the bank / Type of bank account</p>
-          <p class="p donation__requisites">8380 2880 8028 8791 7435</p>
+          <a class="donation__requisites" href="#">8380 2880 8028 8791 7435</a>
           <p class="donation__text">Legal information and lorem ipsum dolor sit amet,
              consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim
               sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et
@@ -143,17 +159,17 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__container">
-        <div class="footer__contacts_container">
-          <h3 class="footer__contacts_title">For questions and suggestions</h3>
-          <p class="footer__contacts_email">email@shelter.com</p>
-          <p class="footer__contacts_phone">+13 674 567 75 54</p>
+        <div class="footer__content_container footer__content_container-contacts">
+          <h3 class="footer__contacts_title footer__title">For questions and suggestions</h3>
+          <a href="mailto:kakurinn.v@yandex.ru" class=" footer__content footer__content-email" >email@shelter.com</a>
+          <a href="tel:+13 674 567 75 54" class=" footer__content footer__content-phone">+13 674 567 75 54</a>
         </div>
-        <div class="footer__address_container">
-          <h3 class="footer__address_title">We are waiting for your visit</h3>
-          <p class="footer__address_boston">1 Central Street, Boston (entrance from the store)</p>
-          <p class="footer__address_london">18 South Park, London </p>
+        <div class="footer__content_container footer__content_container-address">
+          <h3 class="footer__address_title footer__title">We are waiting for your visit</h3>
+          <a href="https://goo.gl/maps/QaLGspNgJ3D6KYB28" target="blank" class="footer__content footer__content-boston">1 Central Street, Boston (entrance from the store)</a>
+          <a href="https://goo.gl/maps/PmGff4m5wTjSrrmY8" target="blank" class="footer__content footer__content-london">18 South Park, London </a>
         </div>
         <div class="footer__img"></div>
       </div>

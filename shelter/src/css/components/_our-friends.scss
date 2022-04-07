@@ -1,0 +1,101 @@
+.our-friends{
+    width: 100%;
+    max-width: 1280px;
+    background: $color-light-l;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &__container{
+        @include flex($direction:column, $wrap:nowrap);
+        row-gap:60px;
+    }
+
+    &__title{
+        @include flex($direction:column, $wrap:nowrap);
+        margin: 0 auto;
+        max-width: 400px;
+        @extend %h3;
+        text-align: center;
+        color: $color-dark-l;
+    }
+
+    &__get_rest{
+        margin: 0 auto;
+        text-decoration: none;
+    }
+}
+
+.slider{
+    @include flex($j-content:space-between,$align:center, $wrap:nowrap);
+    gap: 53px;
+
+    &__arrow{
+        @extend %cursor;
+        width: 52px;
+        height: 52px;
+        border-radius: 100px;
+        border: 2px solid $color-primary;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-color 0.3s ease-in;
+
+
+        &-prev{
+            background-image: url(../assets/svg/arrow-prev.svg);
+        }
+
+        &-next{
+            background-image: url(../assets/svg/arrow-next.svg);
+        }
+
+        &:hover{
+            background-color: $color-primary;
+        }
+    }
+
+    &__items_container{
+        @include flex($j-content:space-between, $align:center, $wrap:nowrap);
+        width: 100%;
+        max-width: 990px;
+    }
+
+    &__item{
+        @extend %cursor;
+        width: 100%;
+        max-width: 270px;
+        margin: 0;
+        padding: 0;
+        background-color: $color-light-s;
+        transition: background 0.3s ease-in;
+
+        &:hover{
+            background-color: $color-light-xl;
+        }
+
+        &:hover .slider__item_button{
+            background: $color-primary-light;
+            border: 2px solid $color-primary-light;
+        }
+    }
+
+    &__item_figcaption{
+        margin: 0;
+        @include flex($direction:column, $j-content:space-between, $align:center, $wrap:nowrap);
+        row-gap: 30px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    &__item_title{
+        margin: 0;
+        @extend %card_title;
+    }
+
+    &__item_button{
+        padding-bottom: 13px;
+        padding-top: 13px;
+    }
+}
+

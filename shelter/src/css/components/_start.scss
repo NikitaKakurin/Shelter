@@ -1,0 +1,40 @@
+.start{
+
+    &__container{
+        @include flex($j_content:space-between, $wrap: nowrap);
+        gap: 40px;
+    }
+
+    &__content{
+        width: 100%;
+        max-width: 460px;
+        padding-top: 163px;
+        padding-bottom: 243px;
+    }
+
+    &__title{
+        @extend %h2;
+        width: 310px;
+        margin: 0;
+        color: $color-light-xl;
+        padding-bottom: 42px;
+    }
+
+    &__text{
+        @extend %paragraph-i;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 42px;
+        color:$color-dark-s;
+    }
+
+    &__img{
+        width: 100%;
+        min-width: 698px;
+        height: 100%;
+        min-height: 728px;
+        background-image: url(../assets/image/background/start-screen-puppy.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

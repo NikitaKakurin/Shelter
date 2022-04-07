@@ -1,0 +1,63 @@
+.donation{
+    width: 100%;
+    max-width: 1280px;
+    padding-top: 80px;
+    padding-bottom: 87px;
+    background-color: $color-light-l;
+
+    &__img{
+        width: 100%;
+        max-width: 505px;
+        height: 261px;
+        background-image: url(../assets/image/background/donation-dog.png);
+        margin-top: 10px;
+    }
+
+    &__container{
+        @include flex($j_content:center);
+        gap: 30px;
+    }
+
+    &__text_container{
+        width: 100%;
+        max-width: 380px
+    }
+
+    &__title{
+        @extend %h3;
+        width: 300px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        color:$color-dark-l;
+    }
+
+    &__bank_info{
+        @extend %h5;
+        margin-bottom: 20px;
+        color:$color-dark-l;
+    }
+
+    &__requisites{
+        display: inline-block;
+        @extend %h4;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 349px;
+        padding-left: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        color:$color-dark-l;
+        background-color: $color-primary;
+        border-radius: 9px;
+        background-image: url(../assets/svg/credit-card.svg);
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        background-size: 30px 23px;
+    }
+
+    &__text{
+        @extend %italic;
+        color:$color-dark-m
+    }
+}

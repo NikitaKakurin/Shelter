@@ -1,0 +1,80 @@
+.footer{
+    width: 100%;
+    max-width: 1280px;
+    padding-top: 38px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: url(../assets/image/background/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+    &__container{
+        @include flex($j_content:space-between);
+    }
+    
+    &__content_container{
+        @include flex($direction:column, $wrap:nowrap);
+        padding-top: 20px;
+
+        &-contacts{
+            width: 279px;
+
+            .footer__title{
+                margin-bottom: 40px;
+            }
+        }
+
+        &-address{
+            width: 302px;
+            
+            .footer__title{
+                margin-bottom: 28px
+            }
+        }
+    }
+
+    &__title{
+        @extend %h3;
+        color: $color-light-xl;
+        margin: 0;
+    }
+
+    &__content{
+        @extend %h4;
+        @extend %cursor;
+        color: $color-primary;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+
+        &-email{
+            background-image: url(../assets/svg/icon-email.svg);
+            margin-bottom: 40px;
+            padding-left: 60px;
+        }
+
+        &-phone{
+            background-image: url(../assets/svg/icon-phone.svg);
+            padding-left: 60px;
+        }
+
+        &-boston{
+            background-image: url(../assets/svg/icon-marker.svg);
+            margin-bottom: 28px;
+            padding-left: 42px;
+        }
+
+        &-london{
+            background-image: url(../assets/svg/icon-marker.svg);
+            padding-left: 42px;
+        }
+    }
+
+    &__img{
+        width: 300px;
+        height: 310px;
+        background-image: url(../assets/image/background/footer-puppy.png);
+    }
+
+}

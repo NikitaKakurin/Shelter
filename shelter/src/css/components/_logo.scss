@@ -21,3 +21,22 @@
     }
 }
 
+.pets-logo{
+    
+    @include flex($direction:column, $j_content:space-between,$align:center);
+    gap: 10px;
+    text-decoration: none;
+
+    &__title{
+        margin: 0;
+        @extend %logo_title;
+        color: $color-dark-l;
+    }
+
+    &__subtitle{
+        margin: 0;
+        @extend %logo_subtitle;
+        color: $color-dark-3xl;
+    }
+}
+

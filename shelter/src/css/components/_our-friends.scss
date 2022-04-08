@@ -1,4 +1,4 @@
-.our-friends{
+.pets-our-friends,.our-friends{
     width: 100%;
     max-width: 1280px;
     background: $color-light-l;
@@ -27,20 +27,37 @@
     }
 }
 
+// .pets-our-friends{
+//     padding-bottom: 102px;
+// }
+
+// .our-friends{
+//     padding-bottom: 100px;
+// }
+
+.pets-slider{
+    width: 100%;
+    &__items_container{
+        @include flex($j-content:space-between, $align:center, $wrap:wrap);
+        width: 100%;
+        max-width: 1200px;
+        column-gap: 40px;
+        row-gap: 30px;
+        padding-bottom: 62px;
+    }
+}
+
+
+
 .slider{
-    @include flex($j-content:space-between,$align:center, $wrap:nowrap);
     gap: 53px;
+    width: 100%;
+    @include flex($j-content:space-between,$align:center);
+}
 
+.slider{
     &__arrow{
-        @extend %cursor;
-        width: 52px;
-        height: 52px;
-        border-radius: 100px;
-        border: 2px solid $color-primary;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: background-color 0.3s ease-in;
-
+        @extend %button-round;
 
         &-prev{
             background-image: url(../assets/svg/arrow-prev.svg);
@@ -56,7 +73,7 @@
     }
 
     &__items_container{
-        @include flex($j-content:space-between, $align:center, $wrap:nowrap);
+        @include flex($j-content:space-between, $align:center, $wrap:wrap);
         width: 100%;
         max-width: 990px;
     }
@@ -99,3 +116,77 @@
     }
 }
 
+.pagination{
+    @include flex($j-content:center, $wrap:nowrap);
+    gap: 20px;
+        &__begin{
+            @extend %button-round;
+            @extend %h4;
+            &:disabled{
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+            }
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+        }
+
+        &__end{
+            @extend %button-round;
+            @extend %h4;
+            &:disabled{
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+            }
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+        }
+
+        &__prev{
+            @extend %button-round;
+            @extend %h4;
+            &:disabled{
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+            }
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+        }
+
+        &__next{
+            @extend %button-round;
+            @extend %h4;
+            &:disabled{
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+            }
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+        }
+
+        &__page{
+            @extend %button-round;
+            @extend %h4;
+            &:disabled{
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+            }
+            background-color: $color-primary;
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+        }
+}

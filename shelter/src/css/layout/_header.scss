@@ -2,8 +2,8 @@
 @import '../abstracts/constants';
 @import '../abstracts/placeholders';
 
-.header{
-    padding-bottom: 60px;
+.pets-header, .header{
+
     &__wrapper{
         @include flex($j_content:space-between,$align:center)
     }
@@ -11,4 +11,14 @@
     &__logo_container{
         margin: 0;
     }
+}
+
+header{
+    padding-bottom: 60px;
+}
+
+.pets-header{
+    width: 100%;
+    padding: 30px 40px;
+    background-color: $color-light-xl;
 }

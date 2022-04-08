@@ -118,6 +118,18 @@
     cursor: pointer;
 }
 
+%button-round{
+    @extend %cursor;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid $color-primary;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s ease-in;
+    color: $color-dark-3xl;
+}
+
 
 
 

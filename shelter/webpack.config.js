@@ -68,9 +68,12 @@ module.exports = {
       hot:true,
       open:true,
     },
-    entry: './index.js',
+    entry: {
+      main:'./index.js',
+      pets:'./pets.js'
+    },
     output: {
-        filename: 'bundle.[contenthash].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: "assets/[hash][ext][query]",
     },
@@ -78,7 +81,14 @@ module.exports = {
     plugins:[
         // new CssMinimizerPlugin(),
         new HTMLWebpackPlugin({
-            template:'./index.html'
+          filename:'./index.html',
+          template:'./index.html',
+          chunks:'[main]',
+        }),
+        new HTMLWebpackPlugin({
+          filename:'./pets.html',
+          template:'./pets.html',
+          chunks:'[pets]',
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

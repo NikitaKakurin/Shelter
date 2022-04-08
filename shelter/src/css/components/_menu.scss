@@ -2,7 +2,7 @@
 @import '../abstracts/constants';
 @import '../abstracts/placeholders';
 
-.menu{
+.pets-menu,.menu{
     &__list{
         @include flex($j_content:space-between, $align:center);
         gap: 35px;
@@ -44,4 +44,24 @@
             color: $color-light-s;
         }
     }
+}
+
+.menu{
+    &__link{
+        color: $color-dark-s;
+
+        &:hover{
+            color: $color-light-s;
+        }
+    }
+}
+
+.pets-menu{
+    &__link{
+        color: $color-dark-l;
+        
+        &:hover{
+            color: $color-dark-3xl;
+        }
+    }        
 }

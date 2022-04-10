@@ -86,7 +86,7 @@ module.exports = {
           chunks:'[main]',
         }),
         new HTMLWebpackPlugin({
-          filename:'./pets.html',
+          filename:'./pets/pets.html',
           template:'./pets.html',
           chunks:'[pets]',
         }),

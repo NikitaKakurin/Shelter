@@ -33,7 +33,6 @@
         
         &-active{
             position: relative;
-            color: $color-light-s;
 
             &::after{
                 width: 100%;
@@ -50,6 +49,10 @@
     &__link{
         color: $color-dark-s;
 
+        &-active{
+            color: $color-light-s;
+        }
+
         &:hover{
             color: $color-light-s;
         }
@@ -60,6 +63,10 @@
     &__link{
         color: $color-dark-l;
         
+        &-active{
+            color: $color-dark-3xl;
+        }
+
         &:hover{
             color: $color-dark-3xl;
         }

@@ -11,7 +11,7 @@ if(process.env.Node_ENV === 'production'){
     mode='production';
 }
 console.log(mode + ' mode');
-const filename  = ext =>(mode==='production')? `[name][contenthash].${ext}`:`[name].${ext}`;
+const filename  = ext =>(mode==='production')? `[name].${ext}`:`[name].${ext}`;
 
 const optimization = function(){
   const config = {
@@ -73,9 +73,9 @@ module.exports = {
       pets:'./pets.js'
     },
     output: {
-        filename: '[name].[contenthash].js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: "assets/[hash][ext][query]",
+        assetModuleFilename: "assets/[ext][query]",
     },
     devtool: 'source-map',
     plugins:[

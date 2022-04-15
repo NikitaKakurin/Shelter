@@ -143,3 +143,13 @@
 .burger-button__line-third{
     transform: translateY(6px) rotate(90deg);
 }
+
+.pets-burger-button{
+    .burger-button__line{
+        background-color: #000000;
+    }
+
+    .burger-button:hover .burger-button__line{
+        background-color: lighten($color-primary, 20%);
+    }
+}

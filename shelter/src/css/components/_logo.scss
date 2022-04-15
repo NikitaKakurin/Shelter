@@ -22,7 +22,7 @@
 }
 
 .pets-logo{
-    
+        
     @include flex($direction:column, $j_content:space-between,$align:center);
     gap: 10px;
     text-decoration: none;

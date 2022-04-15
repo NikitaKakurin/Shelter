@@ -3,6 +3,11 @@
     &__container{
         @include flex($j_content:space-between, $wrap: nowrap);
         gap: 40px;
+
+        @media screen and (max-width:1279px) {
+            flex-direction: column;
+            gap: 0;
+        }
     }
 
     &__content{
@@ -10,14 +15,37 @@
         max-width: 460px;
         padding-top: 163px;
         padding-bottom: 243px;
+
+        @media screen and (max-width:1279px) {
+            align-self: center;
+            padding-top: 0;
+            padding-bottom: 100px;
+            @include flex($direction: column, $wrap:nowrap);
+
+            & .button{
+                align-self: center
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            padding-bottom: 105px;
+        }
     }
 
     &__title{
-        @extend %h2;
+        @include h2;
         width: 310px;
         margin: 0;
         color: $color-light-xl;
         padding-bottom: 42px;
+
+        @media screen and (max-width:767px) {
+            @include h3-mobile();
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
     }
 
     &__text{
@@ -26,15 +54,28 @@
         margin: 0;
         padding-bottom: 42px;
         color:$color-dark-s;
+
+        @media screen and (max-width:767px) {
+            text-align: center;
+        }
     }
 
     &__img{
-        width: 100%;
-        min-width: 698px;
-        height: 100%;
-        min-height: 728px;
+        width: 698px;
+        height: 728px;
         background-image: url(../assets/image/background/start-screen-puppy.png);
         background-repeat: no-repeat;
         background-size: contain;
+
+        @media screen and (max-width:1279px) {
+            width: 569px;
+            height: 593px;
+            margin-left: auto;
+        }
+        @media screen and (max-width:767px) {
+            width: 260px;
+            height: 271.8px;
+            margin-left: auto;
+        }
     }
 }

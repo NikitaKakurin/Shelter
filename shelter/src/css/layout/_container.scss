@@ -1,7 +1,9 @@
 .container{
+    position: relative;
     @include flex($direction:column, $j_content: space-between, $align: center);
     width: 100%;
     max-width: 1280px;
     height: 100%;
     margin: 0 auto;
+    overflow: hidden;
 }

@@ -12,3 +12,51 @@
     line-height: $height;
     letter-spacing: $letter;
 };
+
+@mixin paragraph-mobile-menu(){
+    font-family: Arial;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0px;
+}
+
+@mixin h3-mobile(){
+    font-family: Georgia;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+} 
+    
+@mixin h2(){
+    font-family: Georgia;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 57px;
+    letter-spacing: 0em;
+}
+
+@mixin h3(){
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+} 
+    
+@mixin h4{
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+
+@mixin h5{
+    font-family: Georgia;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+}

@@ -5,12 +5,27 @@
     padding-top: 80px;
     padding-bottom: 100px;
 
+    @media screen and (max-width:1279px) {
+        padding-left: 69px;
+        padding-right: 69px;
+    }
+
+    @media screen and (max-width:767px) {
+        padding: 42px 0;
+    }
+
     &__title{
-        @extend %h3;
+        @include h3();
         margin: 0 auto;
         max-width: 310px;
         text-align: center;
         padding-bottom: 60px;
+
+        @media screen and (max-width:767px) {
+            @include h3-mobile();
+            padding-bottom: 42px;
+            width: 240px;
+        }
     }
 
     &__items_container{
@@ -19,6 +34,24 @@
         row-gap: 55px;
         padding-left: 87px;
         padding-right: 87px;
+
+        @media screen and (max-width:1279px) {
+            padding-left: 0;
+            padding-right: 0;
+            column-gap: 60px;
+            row-gap: 55px;
+        }
+
+        @media screen and (max-width:767px) {
+            justify-content: flex-start;
+            width: 290px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            column-gap: 30px;
+            row-gap: 30px;
+        }
     }
 
     &__item_img{
@@ -28,6 +61,11 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+
+        @media screen and (max-width:767px) {
+            width: 50px;
+            height: 50px; 
+        }
         
         &-food{
             background-image: url(../assets/svg/icon-pet-food.svg);
@@ -67,10 +105,25 @@
     }
 
     &__item_title{
-        @extend %h4;
+        @include h4();
         margin: 0 auto;
         margin-top: 30px;
         text-align: center;
         color: $color-dark-l;
+
+        @media screen and (max-width:767px) {
+            @include h5();
+            margin-top: 20px;
+        }
+    }
+
+    &__item{
+        @media screen and (max-width:1279px) {
+            width: 170px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 130px;
+        }
     }
 }

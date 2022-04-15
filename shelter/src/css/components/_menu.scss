@@ -43,6 +43,25 @@
             color: $color-light-s;
         }
     }
+
+    @media screen and (max-width:767px) {
+        &__list{
+            @include flex($direction:column, $j_content:space-between, $align:center);
+            row-gap: 40px;
+            position: fixed;
+            z-index: 12;
+            top:0;
+            right: -320px;
+            width: 320px;
+            height: 100hv;
+            transition: right 0.5s;
+            background-color: $color-dark-3xl;
+        }
+
+        &__link{
+            @include paragraph-mobile-menu();
+        }
+    }
 }
 
 .menu{
@@ -71,4 +90,56 @@
             color: $color-dark-3xl;
         }
     }        
+}
+
+.burger-background{
+    display: none;
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #292929;
+    opacity: 0.6;
+    z-index: 11;
+}
+
+.burger-button{
+    @extend %cursor;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    width: 30px;
+    height: 30px;
+    margin-right: 43px;
+
+    @media screen and (max-width:767px) {
+        display: flex;
+    }
+}
+
+.burger-button:hover .burger-button__line{
+    background-color: lighten($color-primary, 20%);
+}
+
+.burger-button__line{
+    width: 30px;
+    height: 2px;
+    background-color: $color-primary;
+    transition: all 0.3s;
+    z-index: 13;
+}
+
+.burger-button__line-first{
+    transform: translateY(6px) rotate(90deg);
+}
+
+.burger-button__line-second{
+    transform: translateY(6px) rotate(90deg);
+}
+
+.burger-button__line-third{
+    transform: translateY(6px) rotate(90deg);
 }

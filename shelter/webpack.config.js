@@ -75,7 +75,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: "assets/[ext][query]",
+        assetModuleFilename: "assets/[name][ext][query]",
     },
     devtool: 'source-map',
     plugins:[

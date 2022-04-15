@@ -11,10 +11,14 @@
         padding: 0;
     }
 
+    &__logo{
+        display: none;
+    }
+
     &__link{
         display: inline-block;
         height: 27px;
-        @extend %paragraph-i;
+        @include paragraph-i();
         text-decoration: none;
         vertical-align: middle;
         color: $color-dark-s;
@@ -45,21 +49,38 @@
     }
 
     @media screen and (max-width:767px) {
+        position: fixed;
+        z-index: 12;
+        top:0;
+        right: -320px;
+        width: 320px;
+        height: 823px;
+        transition: right 0.5s;
+        background-color: $color-dark-3xl;
         &__list{
-            @include flex($direction:column, $j_content:space-between, $align:center);
-            row-gap: 40px;
-            position: fixed;
-            z-index: 12;
-            top:0;
-            right: -320px;
-            width: 320px;
-            height: 100hv;
-            transition: right 0.5s;
-            background-color: $color-dark-3xl;
+            @include flex($direction:column, $j_content:center, $align:center);
+            row-gap: 43px;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__logo{
+            @include flex($direction:column, $j_content:space-between,$align:center);
+            gap: 10px;
+            text-decoration: none;
+            position: absolute;
+            top: 30px;
+            left: 10px;
         }
 
         &__link{
             @include paragraph-mobile-menu();
+            height: 49px;
+
+            &::after{
+                bottom: -3px;
+            }
         }
     }
 }
@@ -92,17 +113,7 @@
     }        
 }
 
-.burger-background{
-    display: none;
-    width: 100vw;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #292929;
-    opacity: 0.6;
-    z-index: 11;
-}
+
 
 .burger-button{
     @extend %cursor;
@@ -114,10 +125,16 @@
     width: 30px;
     height: 30px;
     margin-right: 43px;
+    transition: transform 0.5s;
+    z-index: 13;
 
     @media screen and (max-width:767px) {
         display: flex;
     }
+}
+
+.burger-button-active{
+    transform: rotate(90deg);
 }
 
 .burger-button:hover .burger-button__line{
@@ -132,18 +149,6 @@
     z-index: 13;
 }
 
-.burger-button__line-first{
-    transform: translateY(6px) rotate(90deg);
-}
-
-.burger-button__line-second{
-    transform: translateY(6px) rotate(90deg);
-}
-
-.burger-button__line-third{
-    transform: translateY(6px) rotate(90deg);
-}
-
 .pets-burger-button{
     .burger-button__line{
         background-color: #000000;
@@ -151,5 +156,22 @@
 
     .burger-button:hover .burger-button__line{
         background-color: lighten($color-primary, 20%);
+    }
+}
+
+.burger_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #292929;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s;
+
+    &-show{
+        opacity: 0.6;
+        z-index: 10;
     }
 }

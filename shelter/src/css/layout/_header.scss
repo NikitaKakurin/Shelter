@@ -24,6 +24,7 @@
     max-width: 1280px;
     padding: 30px 40px;
     background-color: $color-light-xl;
+    z-index: 12;
 
     @media screen and (max-width:1279px) {
         padding: 30px 30px;

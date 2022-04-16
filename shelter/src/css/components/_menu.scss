@@ -42,10 +42,6 @@
                 width: 100%;
             }
         }
-
-        &:hover{
-            color: $color-light-s;
-        }
     }
 
     @media screen and (max-width:767px) {
@@ -54,7 +50,7 @@
         top:0;
         right: -320px;
         width: 320px;
-        height: 823px;
+        height: 100vh;
         transition: right 0.5s;
         background-color: $color-dark-3xl;
         &__list{
@@ -110,6 +106,18 @@
         &:hover{
             color: $color-dark-3xl;
         }
+
+        @media screen and (max-width:767px) {
+            color: $color-dark-s;
+
+            &-active{
+                color: $color-light-s;
+            }
+
+            &:hover{
+                color: $color-light-s;
+            }
+        }
     }        
 }
 
@@ -154,7 +162,22 @@
         background-color: #000000;
     }
 
-    .burger-button:hover .burger-button__line{
+    &:hover .burger-button__line{
+        background-color:$color-primary;
+    }
+}
+
+.pets-burger-button:hover .burger-button__line{
+    background-color:$color-primary;
+}
+
+.pets-burger-button-active{
+    transform: rotate(90deg);
+    .burger-button__line{
+        background-color: $color-primary;
+    }
+
+    &:hover .burger-button__line{
         background-color: lighten($color-primary, 20%);
     }
 }

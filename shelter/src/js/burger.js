@@ -5,6 +5,7 @@ export class Burger{
         this.shadow = document.querySelector('.burger_background');
         this.isMenuOpen = false;
         this.menuWidth = this.menu?.clientWidth;
+        this.burgerActiveClass=`${burgerClassName.slice(1)}-active`;
     }
 
     handleClickOnBurger(){
@@ -36,6 +37,6 @@ export class Burger{
         } else{
             fun = "remove";
         }
-        this.burger.classList[fun]("burger-button-active");
+        this.burger.classList[fun](this.burgerActiveClass);
     }
 }

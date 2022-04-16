@@ -83,7 +83,7 @@ module.exports = {
         new HTMLWebpackPlugin({
           filename:'./index.html',
           template:'./index.html',
-          chunks:'[main]',
+          chunks:'[index]',
         }),
         new HTMLWebpackPlugin({
           filename:'./pets/pets.html',

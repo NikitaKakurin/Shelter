@@ -3,7 +3,7 @@ import {Burger} from './js/burger'
 
 window.addEventListener('load', ()=>{
     const burger = new Burger('.burger-button','.menu');
-    burger.closeMenu()
+    burger.closeMenu();
     document.addEventListener('click', handleClick)
 
     function handleClick(event){

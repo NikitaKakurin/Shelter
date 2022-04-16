@@ -2,7 +2,6 @@ export class Burger{
     constructor(burgerClassName, MenuClassName){
         this.menu = document.querySelector(MenuClassName);
         this.burger = document.querySelector(burgerClassName);
-        this.lines = document.querySelectorAll(`${burgerClassName}__line`);
         this.shadow = document.querySelector('.burger_background');
         this.isMenuOpen = false;
         this.menuWidth = this.menu?.clientWidth;

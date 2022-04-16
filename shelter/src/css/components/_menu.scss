@@ -2,6 +2,7 @@
 @import '../abstracts/constants';
 @import '../abstracts/placeholders';
 
+// ------------------common start--------------
 .pets-menu,.menu{
     &__list{
         @include flex($j_content:space-between, $align:center);
@@ -9,10 +10,12 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        z-index: 12;
     }
 
     &__logo{
         display: none;
+        z-index: 12;
     }
 
     &__link{
@@ -23,7 +26,7 @@
         vertical-align: middle;
         color: $color-dark-s;
         transition: color .3s ease-in;
-        
+        z-index: 12;
         &::after{
             position: absolute;
             content: "";
@@ -33,13 +36,15 @@
             height: 3px;
             background-color: $color-primary;
             transition: width .3s ease-in;
+            z-index: 12;
         }
         
         &-active{
             position: relative;
-
+            z-index: 12;
             &::after{
                 width: 100%;
+                z-index: 12;
             }
         }
     }
@@ -74,6 +79,7 @@
             @include paragraph-mobile-menu();
             height: 49px;
 
+
             &::after{
                 bottom: -3px;
             }
@@ -81,6 +87,7 @@
     }
 }
 
+// ------------------common end--------------
 .menu{
     &__link{
         color: $color-dark-s;

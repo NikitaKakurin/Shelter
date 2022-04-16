@@ -19,24 +19,25 @@
 }
 
 .pets-header{
-    position: fixed; 
     width: 100%;
-    max-width: 1280px;
-    padding: 30px 40px;
-    background-color: $color-light-xl;
-    z-index: 12;
+    // background-color: $color-light-xl;
+    // z-index: 10;
+    // position: relative;
 
-    @media screen and (max-width:1279px) {
-        padding: 30px 30px;
-    }
-
-    @media screen and (max-width:767px) {
-        padding: 30px 10px;
-    }
 
     &__wrapper{
         @include flex($j_content:space-between,$align:center);
+        position: fixed; 
+        width: 100%;
+        max-width: 1280px;
+        padding: 30px 40px;
         background-color: $color-light-xl;
-
+        @media screen and (max-width:1279px) {
+            padding: 30px 30px;
+        }
+        
+        @media screen and (max-width:767px) {
+            padding: 30px 10px;
+        }
     }
 }

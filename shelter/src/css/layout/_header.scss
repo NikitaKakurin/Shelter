@@ -15,10 +15,13 @@
 
 .header{
     padding-bottom: 60px;
+    
 }
 
 .pets-header{
+    position: fixed; 
     width: 100%;
+    max-width: 1280px;
     padding: 30px 40px;
     background-color: $color-light-xl;
 
@@ -28,5 +31,11 @@
 
     @media screen and (max-width:767px) {
         padding: 30px 10px;
+    }
+
+    &__wrapper{
+        @include flex($j_content:space-between,$align:center);
+        background-color: $color-light-xl;
+
     }
 }

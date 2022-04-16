@@ -4,6 +4,10 @@
 @import './abstracts/mixins';
 @import './abstracts/constants';
 @import './abstracts/placeholders';
+// ------.---------layout--------------
+@import './layout/container.scss';
+@import './layout/header.scss';
+@import './layout/footer.scss';
 // ------------base-------------
 @import './base/base.scss';
 @import './base/buttons.scss';
@@ -11,7 +15,3 @@
 @import './components/logo';
 @import './components/menu';
 @import './components/our-friends';
-// ------.---------layout--------------
-@import './layout/container.scss';
-@import './layout/header.scss';
-@import './layout/footer.scss';

@@ -47,6 +47,9 @@
 
     @media screen and (max-width:1279px) {
         gap:12px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 768px;
     }
 
     @media screen and (max-width:767px) {
@@ -65,7 +68,7 @@
 
         @media screen and (max-width:1279px) {
             flex-wrap: nowrap;
-            width: 580px;
+            max-width: 580px;
             overflow: hidden;
             gap: 40px;
         }
@@ -205,6 +208,9 @@
         @media screen and (max-width:1279px) {
             justify-content: center;
             padding-bottom: 45px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 768px;
         }
 
         @media screen and (max-width:767px) {

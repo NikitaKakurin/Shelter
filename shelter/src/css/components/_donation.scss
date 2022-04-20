@@ -34,6 +34,17 @@
 
         @media screen and (max-width:1279px) {
             row-gap: 34px;
+            width: 100%;
+            max-width: 767px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 100%;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 

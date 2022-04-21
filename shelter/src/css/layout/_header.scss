@@ -15,15 +15,10 @@
 
 .header{
     padding-bottom: 60px;
-    
 }
 
 .pets-header{
     width: 100%;
-    // background-color: $color-light-xl;
-    // z-index: 10;
-    // position: relative;
-
 
     &__wrapper{
         @include flex($j_content:space-between,$align:center);

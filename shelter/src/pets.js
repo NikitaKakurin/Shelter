@@ -8,13 +8,14 @@ window.addEventListener('load', ()=>{
 
     function handleClick(event){
         const target = event.target;
-        if(event.target.closest('.burger-button')){
+        if(target.closest('.burger-button')){
             burger.handleClickOnBurger();
             return;
-        }else{
-            if(burger.isMenuOpen){
-                burger.closeMenu();
-            }
         }
+        if(target.classList.contains('burger-background')||
+            target.classList.contains('pets-menu__link')){
+            burger.closeMenu();
+            return;
+        }     
     }
 })

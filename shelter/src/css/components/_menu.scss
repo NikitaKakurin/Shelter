@@ -4,6 +4,7 @@
 
 // ------------------common start--------------
 .pets-menu,.menu{
+    z-index: 12;
     &__list{
         @include flex($j_content:space-between, $align:center);
         gap: 35px;
@@ -24,7 +25,7 @@
         @include paragraph-i();
         text-decoration: none;
         vertical-align: middle;
-        color: $color-dark-s;
+        // color: $color-dark-s;
         transition: color .3s ease-in;
         z-index: 12;
         &::after{
@@ -57,7 +58,6 @@
         width: 320px;
         height: 100vh;
         transition: right 0.5s;
-        background-color: $color-dark-3xl;
         &__list{
             @include flex($direction:column, $j_content:center, $align:center);
             row-gap: 43px;
@@ -88,7 +88,16 @@
 }
 
 // ------------------common end--------------
+
+// ------------------main start--------------
 .menu{
+    @media screen and (max-width:767px) {
+        &__list{
+            background-color: $color-dark-3xl;
+            z-index: 12;
+        }
+    }
+    
     &__link{
         color: $color-dark-s;
 
@@ -102,7 +111,16 @@
     }
 }
 
+// ------------------pets start--------------
 .pets-menu{
+    @media screen and (max-width:767px) {
+        // background-color: $color-light-xl;
+        &__list{
+            background-color: #ffffff;
+            z-index: 12;
+        }
+    }
+
     &__link{
         color: $color-dark-l;
         
@@ -115,21 +133,21 @@
         }
 
         @media screen and (max-width:767px) {
-            color: $color-dark-s;
+            color: $color-dark-l;
 
             &-active{
-                color: $color-light-s;
+                color: $color-dark-3xl;
             }
 
             &:hover{
-                color: $color-light-s;
+                color: $color-dark-3xl;
             }
         }
     }        
 }
+// ------------------pets end--------------
 
-
-
+// ------------------common start--------------
 .burger-button{
     @extend %cursor;
     display: none;
@@ -141,7 +159,7 @@
     height: 30px;
     margin-right: 43px;
     transition: transform 0.5s;
-    z-index: 13;
+    z-index: 20;
 
     @media screen and (max-width:767px) {
         display: flex;
@@ -161,8 +179,12 @@
     height: 2px;
     background-color: $color-primary;
     transition: all 0.3s;
-    z-index: 13;
+    z-index: 20;
 }
+
+// ------------------common end--------------
+
+// ------------------pets start--------------
 
 .pets-burger-button{
     .burger-button__line{
@@ -181,15 +203,17 @@
 .pets-burger-button-active{
     transform: rotate(90deg);
     .burger-button__line{
-        background-color: $color-primary;
+        background-color: #000000;
     }
 
     &:hover .burger-button__line{
-        background-color: lighten($color-primary, 20%);
+        background-color: $color-primary;
     }
 }
 
-.burger_background{
+// ------------------pets end--------------
+
+.burger-background{
     display:none;
     position: fixed;
     left: 0;
@@ -198,12 +222,11 @@
     height: 100vh;
     background-color: #292929;
     opacity: 0;
-    z-index: -1;
+    z-index: 10;
     transition: opacity 0.5s;
 
     &-show{
         display: block;
         opacity: 0.6;
-        z-index: 10;
     }
 }

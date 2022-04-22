@@ -65,6 +65,7 @@
         @include flex($j-content:space-between, $align:center, $wrap:wrap);
         width: 100%;
         max-width: 990px;
+        overflow: hidden;
 
         @media screen and (max-width:1279px) {
             flex-wrap: nowrap;
@@ -144,6 +145,38 @@
 }
 
 .slider{
+    &__wrappers_container{
+        position: relative;
+        left: -1080px;
+        @include flex($j-content:space-between, $align:center, $wrap:nowrap);
+        gap: 90px;
+        
+        @media screen and (max-width:1279px) {
+            gap: 40px;
+            left: -620px;
+        }
+
+        @media screen and (max-width:767px) {
+            gap: 0px;
+            left: -270px;
+        }
+    }
+
+    &__items_wrapper{
+        @include flex($j-content:space-between, $align:center, $wrap:nowrap);
+        width: 990px;
+        gap: 90px;
+
+        @media screen and (max-width:1279px) {
+            width: 580px;
+            gap: 40px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 270px;
+        }        
+    }
+
     &__arrow{
         @extend %button-round;
 
@@ -160,6 +193,50 @@
         }
     }
 }
+
+@keyframes main-move-right {
+    from {left: -1080px;}
+    to {left: -2160px;}
+}
+
+@keyframes main-move-left {
+    from {left: -1080px;}
+    to {left: 0px;}
+}
+
+@media screen and (max-width:1279px) {
+    @keyframes main-move-right {
+        from {left: -620px;}
+        to {left: -1240px;}
+    }
+
+    @keyframes main-move-left {
+      from {left: -620px;}
+      to {left: 0px;}
+    }
+}
+
+@media screen and (max-width:767px) {
+    @keyframes main-move-right {
+        from {left: -270px;}
+        to {left: -540px;}
+    }
+
+    @keyframes main-move-left {
+        from {left: -270px;}
+        to {left: 0px;}
+      }
+}
+
+  .main-transition-right {
+    animation-name: main-move-right;
+    animation-duration: 0.7s;
+  }
+  
+  .main-transition-left {
+    animation-name: main-move-left;
+    animation-duration: 0.75s;
+  }
 // -----------------main end-----------------------
 
 

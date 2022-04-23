@@ -1,10 +1,13 @@
-import './css/pets.scss'
-import {Burger} from './js/burger'
+import './css/pets.scss';
+import {Burger} from './js/burger';
+import {Popup} from './js/mainPopup';
+
 
 window.addEventListener('load', ()=>{
     const burger = new Burger('.pets-burger-button','.pets-menu');
-    burger.closeMenu()
-    document.addEventListener('click', handleClick)
+    const popup = new Popup('.popup');
+    burger.closeMenu();
+    document.addEventListener('click', handleClick);
 
     function handleClick(event){
         const target = event.target;
@@ -17,5 +20,16 @@ window.addEventListener('load', ()=>{
             burger.closeMenu();
             return;
         }     
+
+        if(target.closest('.slider__item')){
+            let id = target.closest('.slider__item').dataset.id
+            popup.show(id)
+            return;
+        }
+        if(target.classList.contains('popup-active')||
+           target.classList.contains('popup__button')){
+            popup.hide()
+            return;
+        }
     }
 })

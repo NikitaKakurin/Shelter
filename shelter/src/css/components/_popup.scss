@@ -23,11 +23,19 @@
         padding: 0;
     }
     &__container{        
-        @include flex($j-content:center, $align:center, $wrap:nowrap);
+        @include flex($j-content:center, $align:flex-start, $wrap:nowrap);
         overflow-y: auto;
-        width: 630px;
+        width: 900px;
         background-color: $color-light-s;
         border-radius: 9px;
+
+        @media screen and (max-width:1279px) {
+            width: 630px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 240px;
+        }
 
         &:hover+.popup__button{
             background-color: transparent;
@@ -35,45 +43,90 @@
     }
 
     &__img{
-        width: 350px;
-        height: 350px;
+        width: 500px;
+        height: 500px;
+        @media screen and (max-width:1279px) {
+            width: 350px;
+            height: 350px;
+        }
     }
 
     &__content{
-        width: 323px;
-        height: 350px;
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        height: 500px;
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+
+        @media screen and (max-width:1279px) {
+            height: 350px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @media screen and (max-width:767px) {
+            height: 341px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
     }
 
     &__title{
         @include h3();
         margin: 0;
-        padding-bottom: 11px;
+        padding-bottom: 9px;
+        @media screen and (max-width:1279px) {
+            padding-bottom: 11px;
+        }
+        @media screen and (max-width:767px) {
+            text-align: center;
+        }
     }
 
     &__type{
         @include h4();
         margin: 0;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
+        @media screen and (max-width:1279px) {
+            padding-bottom: 20px;
+        }
+        @media screen and (max-width:767px) {
+            text-align: center;
+        }
     }
 
     &__text{
-        @include paragraph-modal();
+        @include h5();
         margin: 0;
-        padding-bottom: 17px;
+        padding-bottom: 39px;
+
+        @media screen and (max-width:1279px) {
+            @include paragraph-modal();
+            padding-bottom: 17px;
+        }
+        @media screen and (max-width:767px) {
+            text-align: justify;
+            padding-bottom: 22px;
+        }
     }
 
     &__characteristic{
         @include flex($direction:column, $wrap:nowrap);
-        row-gap: 7px;
+        row-gap: 11px;
         list-style-image:url('../assets/svg/dot.svg') ;
         list-style-position: inside;
         padding: 0;
         margin: 0;
-        
+
+        @media screen and (max-width:1279px) {
+            row-gap: 7px;
+        }        
     }
+    
 
     &__characteristic_name{
         @include h5-modal();
@@ -95,6 +148,10 @@
         background-image: url('../assets/svg/cross.svg');
         background-position: center;
         background-color: transparent;
+
+        @media screen and (max-width:767px) {
+            right: -32px;
+        }
 
         &:hover{
             background-color: $color-primary-light;

@@ -1,0 +1,105 @@
+.popup{
+    
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: background 0.7s;
+
+    &-active{
+        z-index: 30;
+        position: fixed;
+        background: rgba(41, 41, 41, 0.6);
+        @include flex($j-content:center, $align:center, $wrap:nowrap);
+        width: 100vw;
+        height: 100vh;
+
+        &:hover .popup__button{
+            background-color: $color-primary-light;
+        }
+    }
+
+    &__wrapper{
+        position: relative;
+        padding: 0;
+    }
+    &__container{        
+        @include flex($j-content:center, $align:center, $wrap:nowrap);
+        overflow-y: auto;
+        width: 630px;
+        background-color: $color-light-s;
+        border-radius: 9px;
+
+        &:hover+.popup__button{
+            background-color: transparent;
+        }
+    }
+
+    &__img{
+        width: 350px;
+        height: 350px;
+    }
+
+    &__content{
+        width: 323px;
+        height: 350px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__title{
+        @include h3();
+        margin: 0;
+        padding-bottom: 11px;
+    }
+
+    &__type{
+        @include h4();
+        margin: 0;
+        padding-bottom: 20px;
+    }
+
+    &__text{
+        @include paragraph-modal();
+        margin: 0;
+        padding-bottom: 17px;
+    }
+
+    &__characteristic{
+        @include flex($direction:column, $wrap:nowrap);
+        row-gap: 7px;
+        list-style-image:url('../assets/svg/dot.svg') ;
+        list-style-position: inside;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    &__characteristic_name{
+        @include h5-modal();
+        padding-right: 1rem;
+        vertical-align: middle;
+    }
+
+    &__characteristic_text{
+        @include h5();
+        vertical-align: middle
+    }
+
+    &__button{
+        @extend %button-round;
+        position: absolute;
+        top: -52px;
+        right: -42px;
+        z-index: 40;
+        background-image: url('../assets/svg/cross.svg');
+        background-position: center;
+        background-color: transparent;
+
+        &:hover{
+            background-color: $color-primary-light;
+        }
+    }
+
+
+}

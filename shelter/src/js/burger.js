@@ -21,7 +21,7 @@ export class Burger{
         this.menu.style.right='0px';
         this.shadow.classList.add('burger-background-show')
         this.changeBurgerButton(this.isMenuOpen)
-        document.body.style.overflow="hidden";
+        document.body.style.overflowY="hidden";
     };
     
     closeMenu(){
@@ -29,7 +29,7 @@ export class Burger{
         this.menu.style.right=-this.menuWidth +'px';
         this.shadow.classList.remove('burger-background-show')
         this.changeBurgerButton(this.isMenuOpen)
-        document.body.style.overflow="auto";
+        document.body.style.overflowY="auto";
     };
 
     changeBurgerButton(isToOpen) {

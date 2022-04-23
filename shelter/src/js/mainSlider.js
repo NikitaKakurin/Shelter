@@ -8,27 +8,7 @@ let ActiveCardsNumbers = [];
 let isSlideMove = false;
 
 export function makeSlider(){
-    if(window.innerWidth>=1280){
-        cardsWrappers.forEach(elem=>{
-            elem.append(createCard(...ChooseRandomCard(3)),
-            createCard(...ChooseRandomCard(3)),
-            createCard(...ChooseRandomCard(3)));
-        })
-        return;
-    }
-    if(window.innerWidth<1280 && window.innerWidth>=678){
-        cardsWrappers.forEach(elem=>{
-            elem.append(createCard(...ChooseRandomCard(2)),
-            createCard(...ChooseRandomCard(2)));
-        })
-        return;
-    }
-    if(window.innerWidth<678){
-        cardsWrappers.forEach(elem=>{
-            elem.append(createCard(...ChooseRandomCard(1)));
-        })
-        return;
-    }
+    changeTargetCardsWrappers(1)
 }
 
 export function slideMoveNext() {

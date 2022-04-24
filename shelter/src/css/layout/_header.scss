@@ -19,7 +19,7 @@
 
 .pets-header{
     width: 100%;
-
+    z-index: 5;
     &__wrapper{
         @include flex($j_content:space-between,$align:center);
         position: fixed; 

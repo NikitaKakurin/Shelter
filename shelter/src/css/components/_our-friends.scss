@@ -282,7 +282,6 @@
         width: 100%;
         max-width: 1200px;
         column-gap: 40px;
-        row-gap: 30px;
         overflow: hidden;
         
         @media screen and (max-width:1279px) {
@@ -295,7 +294,6 @@
 
         @media screen and (max-width:767px) {
             justify-content: center;
-            row-gap: 31px;
             max-width: 270px;
             margin-left: auto;
             margin-right: auto;
@@ -325,16 +323,19 @@
         @include flex($j-content:space-between, $align:center);
         z-index: 1;
         width: 1200px;
-        gap: 40px;
+        column-gap: 40px;
+        row-gap: 30px;
 
 
         @media screen and (max-width:1279px) {
             width: 580px;
-            gap: 40px;
+            column-gap: 40px;
+            row-gap: 30px;
         }
 
         @media screen and (max-width:767px) {
             width: 270px;
+            row-gap: 31px;
         }        
     }
 

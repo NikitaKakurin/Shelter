@@ -16,10 +16,10 @@ export function generate48Pets(){
     if(window.innerWidth>=1280){
         size = 8;
         count = 6;
-    }else if(window.innerWidth<1280 && window.innerWidth>=678){
+    }else if(window.innerWidth<1280 && window.innerWidth>=768){
         size = 6;
         count = 8;
-    }else if(window.innerWidth<678){
+    }else if(window.innerWidth<768){
         size = 3;
         count = 16;
     }

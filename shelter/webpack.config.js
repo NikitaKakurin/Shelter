@@ -69,8 +69,8 @@ module.exports = {
       open:true,
     },
     entry: {
-      main:'./index.js',
-      pets:'./pets.js'
+      "index":'./index.js',
+      "pets":'./pets.js'
     },
     output: {
         filename: '[name].js',
@@ -83,12 +83,14 @@ module.exports = {
         new HTMLWebpackPlugin({
           filename:'./index.html',
           template:'./index.html',
-          chunks:'[index]',
+          inject:true,
+          chunks:['index'],
         }),
         new HTMLWebpackPlugin({
           filename:'./pets/pets.html',
           template:'./pets.html',
-          chunks:'[pets]',
+          inject:true,
+          chunks:['pets'],
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

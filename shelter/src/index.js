@@ -1,4 +1,4 @@
-import './css/main.scss';
+import './css/index.scss';
 import {Burger} from './js/burger';
 import {makeSlider, slideMoveNext, slideMovePrev} from './js/mainSlider';
 import {Popup} from './js/mainPopup';

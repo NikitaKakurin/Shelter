@@ -16,12 +16,19 @@
         &:hover .popup__button{
             background-color: $color-primary-light;
         }
+
+        .popup__wrapper{
+            opacity: 1;
+        }
     }
 
     &__wrapper{
         position: relative;
         padding: 0;
+        opacity: 0;
+        transition: opacity 0.4s;
     }
+
     &__container{        
         @include flex($j-content:center, $align:flex-start, $wrap:nowrap);
         overflow-y: auto;
@@ -157,6 +164,4 @@
             background-color: $color-primary-light;
         }
     }
-
-
 }

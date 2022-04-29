@@ -1,0 +1,95 @@
+.pagination{
+    @include flex($j-content:center, $wrap:nowrap);
+    gap: 20px;
+
+    
+    @media screen and (max-width:767px) {
+        column-gap: 10px;
+    }
+    
+        &__begin{
+            @extend %button-round;
+            @extend %h4;
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+
+            &:disabled{
+                cursor: default;
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+                background: transparent;
+            }
+        }
+
+        &__end{
+            @extend %button-round;
+            @extend %h4;
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+
+            &:disabled{
+                cursor: default;
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+                background: transparent;
+            }
+        }
+
+        &__prev{
+            @extend %button-round;
+            @extend %h4;
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+
+            &:disabled{
+                cursor: default;
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+                background: transparent;
+            }
+        }
+
+        &__next{
+            @extend %button-round;
+            @extend %h4;
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+
+            &:disabled{
+                cursor: default;
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+                background: transparent;
+            }
+        }
+
+        &__page{
+            @extend %button-round;
+            @extend %h4;
+            background-color: $color-primary;
+
+            &:hover{
+                background: $color-primary-light;
+                border: 2px solid $color-primary-light;
+            }
+
+            &:disabled{
+                cursor: default;
+                color: $color-dark-s;
+                border-color: $color-dark-s;
+                background: transparent;
+            }
+        }
+}

@@ -1,4 +1,5 @@
-import { allPets } from "./allPets";
+import { ALL_PETS } from "./allPets";
+import {createCard, createOneElement} from "./commonFunctions";
 const arrayPages=[]
 const cardsContainer = document.querySelector('.pets-slider__items_container');
 const cardsWrappersContainer = cardsContainer.querySelector('.pets-slider__wrappers_container');
@@ -63,9 +64,9 @@ function changeTargetCardsWrappers(target, page) {
     cardsWrappers[target].innerHTML="";
     let fragment = document.createDocumentFragment();
     for(let num of arrayPages[page-1]){
-        fragment.append(createCard(allPets[num].name,
-                                     allPets[num].img,
-                                     allPets[num].id));
+        fragment.append(createCard(ALL_PETS[num].name,
+                                     ALL_PETS[num].img,
+                                     ALL_PETS[num].id));
     }
     cardsWrappers[target].append(fragment)
 }
@@ -140,38 +141,4 @@ function finishSlidersAnimation(event) {
 
 function changeActiveCardsWrappers(target) {
     cardsWrappers[1].innerHTML =  cardsWrappers[target].innerHTML;
-}
-
-function createCard(petsName, imageSrc, id){
-    const FIGURE = createOneElement('figure', 'slider__item');
-    FIGURE.dataset.id = `${id}`;
-
-    const IMAGE = createOneElement('img','slider__item_img');
-    IMAGE.width = '270';
-    IMAGE.height = '270';
-    IMAGE.alt = petsName;
-    IMAGE.src = imageSrc;
-
-    const FIGCAPTION = createOneElement('figcaption', 'slider__item_figcaption')
-
-    const TITLE = createOneElement('h3','slider__item_title');
-    TITLE.innerText = petsName;
-
-    const BUTTON = createOneElement('button', ['slider__item_button', 'button', 'button-light']);
-    BUTTON.innerText='Learn more';
-    FIGCAPTION.append(TITLE,BUTTON);
-    FIGURE.append(IMAGE,FIGCAPTION)
-    return FIGURE;
-}
-
-function createOneElement(tag, className){
-    const ELEMENT = document.createElement(tag);
-    if(Array.isArray(className)){
-        className.forEach(classItem=>{
-            ELEMENT.classList.add(classItem);
-        })
-    }else{
-        ELEMENT.classList.add(className);
-    }
-    return ELEMENT;
 }

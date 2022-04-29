@@ -106,44 +106,6 @@
             width: 270px;
         }
     }
-
-    &__item{
-        @extend %cursor;
-        width: 100%;
-        max-width: 270px;
-        margin: 0;
-        padding: 0;
-        background-color: $color-light-s;
-        border-radius: 9px 9px 0px 0px;
-        transition: background 0.3s ease-in;
-
-        &:hover{
-            background-color: $color-light-xl;
-        }
-
-        &:hover .slider__item_button{
-            background: $color-primary-light;
-            border: 2px solid $color-primary-light;
-        }
-    }
-
-    &__item_figcaption{
-        margin: 0;
-        @include flex($direction:column, $j-content:space-between, $align:center, $wrap:nowrap);
-        row-gap: 30px;
-        padding-top: 28px;
-        padding-bottom: 28px;
-    }
-
-    &__item_title{
-        margin: 0;
-        @extend %card_title;
-    }
-
-    &__item_button{
-        padding-bottom: 13px;
-        padding-top: 13px;
-    }
 }
 
 .slider{
@@ -338,10 +300,6 @@
             row-gap: 31px;
         }        
     }
-
-    .slider__item{
-        z-index: 1;
-    }
 }
 
 @keyframes pets-move-right {
@@ -388,100 +346,6 @@
     animation-duration: 0.7s;
 }
 
-.pagination{
-    @include flex($j-content:center, $wrap:nowrap);
-    gap: 20px;
 
-    
-    @media screen and (max-width:767px) {
-        column-gap: 10px;
-    }
-    
-        &__begin{
-            @extend %button-round;
-            @extend %h4;
-
-            &:hover{
-                background: $color-primary-light;
-                border: 2px solid $color-primary-light;
-            }
-
-            &:disabled{
-                cursor: default;
-                color: $color-dark-s;
-                border-color: $color-dark-s;
-                background: transparent;
-            }
-        }
-
-        &__end{
-            @extend %button-round;
-            @extend %h4;
-
-            &:hover{
-                background: $color-primary-light;
-                border: 2px solid $color-primary-light;
-            }
-
-            &:disabled{
-                cursor: default;
-                color: $color-dark-s;
-                border-color: $color-dark-s;
-                background: transparent;
-            }
-        }
-
-        &__prev{
-            @extend %button-round;
-            @extend %h4;
-
-            &:hover{
-                background: $color-primary-light;
-                border: 2px solid $color-primary-light;
-            }
-
-            &:disabled{
-                cursor: default;
-                color: $color-dark-s;
-                border-color: $color-dark-s;
-                background: transparent;
-            }
-        }
-
-        &__next{
-            @extend %button-round;
-            @extend %h4;
-
-            &:hover{
-                background: $color-primary-light;
-                border: 2px solid $color-primary-light;
-            }
-
-            &:disabled{
-                cursor: default;
-                color: $color-dark-s;
-                border-color: $color-dark-s;
-                background: transparent;
-            }
-        }
-
-        &__page{
-            @extend %button-round;
-            @extend %h4;
-            background-color: $color-primary;
-
-            &:hover{
-                background: $color-primary-light;
-                border: 2px solid $color-primary-light;
-            }
-
-            &:disabled{
-                cursor: default;
-                color: $color-dark-s;
-                border-color: $color-dark-s;
-                background: transparent;
-            }
-        }
-}
 
 // -----------------pets end-----------------------

@@ -1,5 +1,4 @@
-import {allPets} from './allPets';
-
+import {ALL_PETS} from './allPets';
 export class Popup{
     constructor(selector){
         this.popup = document.querySelector(selector);
@@ -8,21 +7,21 @@ export class Popup{
 
     createContent(id){
         this.fragment = document.createDocumentFragment();
-        const petsObj = allPets[id];
+        const PETS_OBJ = ALL_PETS[id];
         if(window.innerWidth>=768){
             const IMAGE = this.createOneElement('img', 'popup__img');
-            IMAGE.alt = petsObj.name;
-            IMAGE.src = petsObj.img;            
+            IMAGE.alt = PETS_OBJ.name;
+            IMAGE.src = PETS_OBJ.img;            
             this.fragment.append(IMAGE);
         }
 
         const CONTENT = this.createOneElement('div', 'popup__content');
         const TITLE = this.createOneElement('div', 'popup__title');
-        TITLE.innerText = petsObj.name;
+        TITLE.innerText = PETS_OBJ.name;
         const TYPE = this.createOneElement('div', 'popup__type');
-        TYPE.innerText = `${petsObj.type} - ${petsObj.breed}`;
+        TYPE.innerText = `${PETS_OBJ.type} - ${PETS_OBJ.breed}`;
         const TEXT = this.createOneElement('div', 'popup__text');
-        TEXT.innerText = petsObj.description;
+        TEXT.innerText = PETS_OBJ.description;
         CONTENT.append(TITLE, TYPE, TEXT);
         const LIST = this.createOneElement('ul', 'popup__characteristic');
 
@@ -33,19 +32,19 @@ export class Popup{
             switch (index) {
                 case 0:
                     name.innerText = "Age:"
-                    text.innerText = petsObj.age;
+                    text.innerText = PETS_OBJ.age;
                     break;
                 case 1:
                     name.innerText = "Inoculations:"
-                    text.innerText = petsObj.inoculations.join(', ');
+                    text.innerText = PETS_OBJ.inoculations.join(', ');
                     break;
                 case 2:
                     name.innerText = "Diseases:"
-                    text.innerText = petsObj.diseases.join(', ');
+                    text.innerText = PETS_OBJ.diseases.join(', ');
                     break;
                 case 3:
                     name.innerText = "Parasites:"
-                    text.innerText = petsObj.parasites.join(', ');
+                    text.innerText = PETS_OBJ.parasites.join(', ');
                     break;
             }
             item.append(name, text);

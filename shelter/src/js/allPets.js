@@ -7,7 +7,7 @@ import sophia from "../assets/image/slider/pets-sophia.png";
 import timmy from "../assets/image/slider/pets-timmy.png";
 import woody from "../assets/image/slider/pets-woody.png";
 
-export const allPets = [
+export const ALL_PETS = [
     {
       "id":"0",
       "name": "Jennifer",
